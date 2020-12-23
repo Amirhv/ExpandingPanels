@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+* {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80vw;
+    overflow: hidden;
+    margin: auto;
+}
+
+.panel {
+    position: relative;
+    flex: 1;
+    background-color: #e3e3e3;
+    margin: 10px;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: flex 1.5s ease;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0%;
+    transition: opacity 2s ease;
+}
+
+.panel1 {
+    background: url("../img/img-01.jpg") no-repeat center center/cover;
+}
+
+.panel2 {
+    background: url("../img/img-02.jpg") no-repeat center center/cover;
+}
+
+.panel3 {
+    background: url("../img/img-03.jpg") no-repeat center center/cover;
+}
+
+.panel4 {
+    background: url("../img/img-04.jpg") no-repeat center center/cover;
+}
+
+.panel5 {
+    background: url("../img/img-05.jpg") no-repeat center center/cover;
+}
+
+.active {
+    flex: 5;
+}
+
+.active > h3 {
+    opacity: 100%;
+}
+
+@media (max-width: 500px) {
+    .main-section {
+        width: 90vw;
+    }
+
+    .panel:nth-child(4),
+    .panel:nth-child(5) {
+        display: none;
+    }
+}
